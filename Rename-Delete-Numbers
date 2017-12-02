@@ -1,0 +1,15 @@
+import os
+
+def file_rename():
+    os.getcwd()
+    #(1) List file names in a folder.
+    files = os.listdir(r'C:\Users\kodiak01\Downloads\Udacity\FileRename')
+    print(files)
+
+    os.chdir(r'C:\Users\kodiak01\Downloads\Udacity\FileRename')
+
+    #(2) For each file, rename.
+    for each_file in files:
+        os.rename( each_file, each_file.translate(str.maketrans('','','0123456789')))
+
+file_rename()
